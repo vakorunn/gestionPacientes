@@ -13,34 +13,35 @@ import javax.swing.JOptionPane;
  *
  * @author gitEv
  */
-public class InsertarPaciente {
-
-    private final String QUERY = "INSERT INTO paciente(pac_dni,pac_obra,pac_apellido,pac_nombre,pac_sexo,pac_fechaNacimiento) VALUES(?,?,?,?,?,?);";
+public class InsertarTurno {
+    
+    private final String QUERY = "INSERT INTO cita(cit_id,cit_obra,cit_apellido,cit_nombre,cit_fechaTurno,cit_horaTurno) VALUES(?,?,?,?,?,?)";
     private final Connector CONNECTOR;
     private PreparedStatement statement;
-
-    public InsertarPaciente() {
+    
+    public InsertarTurno() {
         this.CONNECTOR = new Connector();
+        this.statement = null;
     }
-
-    public int registrarEntrada(String dni, String obraSocial, String apellido, String nombre, String sexo, String fechaNacimiento) {
+    
+    public int registrarTurno(String obraSocial, String apellido, String nombre, String fechaTurno, String horaTurno) {
         int res = 0;
         try {
             statement = CONNECTOR.getConnection().prepareStatement(QUERY);
-            statement.setString(1, dni);
+            statement.setInt(1, 0);
             statement.setString(2, obraSocial);
             statement.setString(3, apellido);
             statement.setString(4, nombre);
-            statement.setString(5, sexo);
-            statement.setString(6, fechaNacimiento);
+            statement.setString(5, fechaTurno);
+            statement.setString(6, horaTurno);
             res = statement.executeUpdate();
             if (res > 0) {
-                JOptionPane.showMessageDialog(null, "Paciente añadido con exito");
+                JOptionPane.showMessageDialog(null, "Turno añadido con exito");
             }
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "No se pudo registrar la entrada.");
         }
         return res;
     }
-
+    
 }

@@ -36,9 +36,9 @@ public class Gestion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btn_altaTurno = new javax.swing.JButton();
-        btn_actualizarTurno = new javax.swing.JButton();
+        btn_listarTurnos = new javax.swing.JButton();
         btn_altaPaciente = new javax.swing.JButton();
-        btn_actualizarPaciente = new javax.swing.JButton();
+        btn_listarPacientes = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -53,9 +53,19 @@ public class Gestion extends javax.swing.JFrame {
 
         btn_altaTurno.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btn_altaTurno.setText("AÑADIR TURNO");
+        btn_altaTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_altaTurnoActionPerformed(evt);
+            }
+        });
 
-        btn_actualizarTurno.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btn_actualizarTurno.setText("ACTUALIZAR TURNO");
+        btn_listarTurnos.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btn_listarTurnos.setText("LISTAR TURNOS");
+        btn_listarTurnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_listarTurnosActionPerformed(evt);
+            }
+        });
 
         btn_altaPaciente.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btn_altaPaciente.setText("AÑADIR PACIENTE");
@@ -65,8 +75,13 @@ public class Gestion extends javax.swing.JFrame {
             }
         });
 
-        btn_actualizarPaciente.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btn_actualizarPaciente.setText("ACTUALIZAR PACIENTE");
+        btn_listarPacientes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btn_listarPacientes.setText("LISTAR PACIENTES");
+        btn_listarPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_listarPacientesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,9 +94,9 @@ public class Gestion extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_actualizarPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                    .addComponent(btn_listarPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
                     .addComponent(btn_altaPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_actualizarTurno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_listarTurnos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_altaTurno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -93,11 +108,11 @@ public class Gestion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btn_altaTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_actualizarTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_listarTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_altaPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_actualizarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_listarPacientes, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -172,6 +187,24 @@ public class Gestion extends javax.swing.JFrame {
         altaPaciente.setVisible(true);
     }//GEN-LAST:event_btn_altaPacienteActionPerformed
 
+    private void btn_altaTurnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_altaTurnoActionPerformed
+        AltaTurno altaTurno = new AltaTurno();
+        altaTurno.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        altaTurno.setVisible(true);
+    }//GEN-LAST:event_btn_altaTurnoActionPerformed
+
+    private void btn_listarPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_listarPacientesActionPerformed
+        ListadoPacientes listadoPacientes = new ListadoPacientes();
+        listadoPacientes.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        listadoPacientes.setVisible(true);
+    }//GEN-LAST:event_btn_listarPacientesActionPerformed
+
+    private void btn_listarTurnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_listarTurnosActionPerformed
+        ListadoTurnos listadoTurnos = new ListadoTurnos();
+        listadoTurnos.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        listadoTurnos.setVisible(true);
+    }//GEN-LAST:event_btn_listarTurnosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -208,10 +241,10 @@ public class Gestion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_actualizarPaciente;
-    private javax.swing.JButton btn_actualizarTurno;
     private javax.swing.JButton btn_altaPaciente;
     private javax.swing.JButton btn_altaTurno;
+    private javax.swing.JButton btn_listarPacientes;
+    private javax.swing.JButton btn_listarTurnos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

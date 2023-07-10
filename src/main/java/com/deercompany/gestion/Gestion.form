@@ -66,9 +66,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="btn_actualizarPaciente" pref="268" max="32767" attributes="0"/>
+                      <Component id="btn_listarPacientes" pref="268" max="32767" attributes="0"/>
                       <Component id="btn_altaPaciente" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btn_actualizarTurno" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btn_listarTurnos" alignment="1" max="32767" attributes="0"/>
                       <Component id="btn_altaTurno" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -83,11 +83,11 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btn_altaTurno" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btn_actualizarTurno" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="btn_listarTurnos" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btn_altaPaciente" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btn_actualizarPaciente" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="btn_listarPacientes" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -109,14 +109,20 @@
             </Property>
             <Property name="text" type="java.lang.String" value="A&#xd1;ADIR TURNO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_altaTurnoActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_actualizarTurno">
+        <Component class="javax.swing.JButton" name="btn_listarTurnos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ACTUALIZAR TURNO"/>
+            <Property name="text" type="java.lang.String" value="LISTAR TURNOS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_listarTurnosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_altaPaciente">
           <Properties>
@@ -129,13 +135,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_altaPacienteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_actualizarPaciente">
+        <Component class="javax.swing.JButton" name="btn_listarPacientes">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ACTUALIZAR PACIENTE"/>
+            <Property name="text" type="java.lang.String" value="LISTAR PACIENTES"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_listarPacientesActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
