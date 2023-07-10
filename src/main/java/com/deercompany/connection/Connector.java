@@ -22,7 +22,7 @@ public class Connector {
     private Connection connector;
     private final String URL = "jdbc:mysql://localhost:3306/gestion";
     private final String USER = "root";
-    private final String PASSWORD = "Loreto_1";
+    private final String PASSWORD = "Pascal261";
     
     public Connector() {
         this.connector = null;
